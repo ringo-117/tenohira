@@ -59,7 +59,7 @@
     font-family: var(--font-ja);
     letter-spacing: 0.14em;
     line-height: 1.6;
-    /* white-space: nowrap; */
+    white-space: nowrap;
   }
 
   .section-title__en {
@@ -72,6 +72,12 @@
   /*==============================================================
     　　こんなお悩みありませんか？
   ==============================================================*/
+  .concerns .section-title__ja {
+    letter-spacing: 0.1em;
+    font-size: 25px;
+  }
+
+
   .concerns-list {
     display: grid;
     grid-template-rows: repeat(4, 1fr);
@@ -198,6 +204,7 @@
     width: fit-content;
     height: 50px;
     margin: 0 0 0 auto;
+    cursor: pointer;
   }
 
   .about-link__arrow,
@@ -556,8 +563,10 @@
     margin-bottom: 60px;
   }
 
-  .section-title__ja {
+  .section-title__ja,
+  .concerns .section-title__ja {
     font-size: 33px;
+    letter-spacing: 0.14em;
   }
 
   .section-title__en {
@@ -785,16 +794,6 @@
     height: 40px;
   }
 
-
-
-
-
-
-
-
-
-
-
 }
 
 
@@ -804,11 +803,212 @@
     　　PC_ヒーロー
   ==============================================================*/
 
+  /*==============================================================
+    　　PC_セクション共通
+  ==============================================================*/
+  .sec {
+    max-width: 1120px;
+    padding: 120px 20px 30px;
+    margin: 0 auto;
+  }
+
+  .section-title__ja,
+  .concerns .section-title__ja {
+    font-size: 33px;
+    letter-spacing: 0.2em;
+  }
+
+  /*==============================================================
+    　　PC_こんなお悩みありませんか？
+  ==============================================================*/
+  .concerns-list {
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 80px;
+  }
+
+  .concerns-item__text-bg {
+    width: 230px;
+    font-size: 14.5px;
+  }
+
+  .concerns-item__img {
+    height: 200px;
+    margin-top: 46px;
+  }
+
+  /*==============================================================
+    　　PC_選ばれてる理由
+  ==============================================================*/
+  .strengths-list {
+    column-gap: 100px;
+    row-gap: 80px;
+    margin: 0;
+  }
+
+  .strengths-lead {
+    padding: 70px 0 35px 40px;
+  }
+
+  .strengths-lead__title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .strengths-lead__text {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 550;
+  }
+
+  /*==============================================================
+    　　PC_てのひらについて
+  ==============================================================*/
+  .about-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 40px;
+  }
+
+  .about-link {
+    grid-column: 1;
+    grid-row: 2;
+    margin-top: 10px;
+  }
+
+  .about-image {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    margin-top: 0;
+  }
+
+  /*==============================================================
+    　　PC_ご利用について
+  ==============================================================*/
+  .guide-list {
+    gap: 80px;
+    margin: 0 20px;
+  }
+
+  .guide-item__icon {
+    height: 200px !important;
+    margin-top: 20px;
+  }
+
+  .guide-item__title {
+    margin-top: 80px;
+  }
+
+  /*==============================================================
+    　　PC_お客様の声
+  ==============================================================*/
+  .sec.review {
+    margin: 0;
+    max-width: none;
+  }
+
+  .review-swiper {
+    padding: 0 50px 120px;
+  }
+
+  .review-title {
+    font-size: 28px;
+    margin-bottom: 8px;
+  }
+
+  /* 準備中 */
+  .swiper-slide.soon .review__text-box .review-title {
+    font-size: 28px;
+  }
+
+  /*==============================================================
+    　　PC_よくある質問
+  ==============================================================*/
+  .faq-link {
+    margin-top: 80px;
+  }
+
+  .faq-box .title-text {
+    letter-spacing: 0.08em;
+  }
+
+  .faq-content .faq-A {
+    letter-spacing: 0.08em;
+    line-height: 1.7;
+  }
+
+
+
 }
 
 @media screen and (min-width: 1400px) {
   /* PC全画面用レイアウト 1400px以上の範囲に収めるデザインはこの中に記述 */
   /*==============================================================
-    　　PC-big_ヘッダー
+    　　PC-big_ヒーロー
   ==============================================================*/
+  .hero__image {
+    height: 100vh;
+    margin-left: 80px;
+    border-radius: 300px 0 0 0;
+  }
+
+  .hero-swiper {
+    padding-bottom: 60px;
+    margin-bottom: 40px;
+  }
+
+  /* ドット */
+  .hero-swiper .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    margin: 0 18px !important;
+  }
+
+  /*==============================================================
+    　　PC-big_お客様の声
+  ==============================================================*/
+  .review-swiper {
+    padding: 0 200px 130px;
+  }
+
+  .review__text-box {
+    bottom: 60px;
+    left: 44px;
+  }
+
+  .review-title {
+    font-size: 33px;
+    margin-bottom: 8px;
+  }
+
+  .review-personal {
+    font-size: 16px;
+  }
+
+  /* 準備中 */
+  .swiper-slide.soon .review__text-box .review-title {
+    font-size: 32px;
+  }
+
+  /* 次のスライドがない時 */
+  .swiper-button-next {
+    right: 200px;
+  }
+
+  .swiper-button-prev {
+    left: -340px;
+  }
+
+  /* 右矢印 */
+  .swiper-button-next img {
+    margin-right: 0;
+  }
+  /* 左矢印 */
+  .swiper-button-prev img {
+    margin-left: 0;
+  }
+
+
+
 }

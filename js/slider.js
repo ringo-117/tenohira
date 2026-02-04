@@ -26,13 +26,14 @@ const reviewSwiper = new Swiper(".review-swiper", {
     },
     // 1024px以上（PC）
     1024: {
-      slidesPerView: 4,
-      spaceBetween: 0,
+      slidesPerView: 2.5,
+      spaceBetween: 45,
+      centeredSlides: false,
 
       /* PCでは動かさない */
-      allowTouchMove: false,
-      loop: false,
-      centeredSlides: false,
+      // allowTouchMove: false,
+      // loop: false,
+      // centeredSlides: false,
     }
   }
 });
