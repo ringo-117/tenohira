@@ -281,7 +281,7 @@
     bottom: 30px;
     left: 24px;
     color: var(--color-text-white);
-    width: fit-content;
+    min-width: 90%;
   }
 
   .review-title {
@@ -322,6 +322,7 @@
     bottom: auto;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
   }
   .swiper-slide.soon .review__text-box .review-title {
     font-size: 21px;
