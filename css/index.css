@@ -91,7 +91,7 @@
     width: 260px;
     margin: 0 auto;
     padding: 30px 20px;
-    font-size: 14px;
+    font-size: 15px;
     background-color: var(--color-bg-concerns);
     color: var(--color-text-concerns);
     letter-spacing: 0.15em;
@@ -106,11 +106,9 @@
     left: 50%;
     top: 100%;
     transform: translateX(-50%);
-
     width: 0;
     height: 0;
     pointer-events: none;
-
     border-left: 12px solid transparent;
     border-right: 12px solid transparent;
     border-top: 16px solid var(--color-bg-concerns);
@@ -182,7 +180,7 @@
     overflow: hidden;
     aspect-ratio: 5 / 7;
     border-radius: 20px;
-    margin-top: 20px;
+    margin-top: 22px;
   }
 
   .about-image img {
@@ -320,12 +318,18 @@
     filter: brightness(50%);
   }
   .swiper-slide.soon .review__text-box {
-    position: absolute;
+    /* position: absolute;
     bottom: auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
+    text-align: center; */
+    display: grid;
+    place-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
   }
   .swiper-slide.soon .review__text-box .review-title {
     font-size: 21px;
