@@ -1,0 +1,497 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+  font-family: -apple-system, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "游ゴシック", "メイリオ", meiryo, sans-serif;
+  font-feature-settings: 'palt' 1;
+  color: var(--color-text-base);
+  background-color: var(--color-bg-bas);
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+}
+
+body.is-menu-open {
+  overflow: hidden;
+  height: 100vh;
+}
+
+:root {
+  /* 背景 */
+  --color-bg-base: #fff;
+  --color-bg-section: #3A5674;
+  --color-bg-concerns: #D9D9D9;
+  --color-bg-faq: #F8F8F8;
+
+
+  /* テキスト */
+  --color-text-base: #3A5674;
+  --color-text-sub: #AFC9E9;
+  --color-text-white: #fff;
+  --color-text-concerns: #000;
+
+  /* 線 */
+  --color-line-item: #AFC9E9;
+
+  /* フォント */
+  /* --font-base: "Noto Sans JP", sans-serif; */
+  --font-ja: "Noto Sans JP", sans-serif;
+  /* --font-en: "Montserrat", sans-serif; */
+}
+
+html {
+  scroll-behavior: smooth; /* スムーススクロール */
+  scroll-margin-top: 60px;
+}
+
+@media screen and (min-width: 320px) {
+  /* スマホ用レイアウト 320px以上の範囲に収めるデザインはこの中に記述 */
+
+  .tb-nav {
+    display: none;
+  }
+
+  /*==============================================================
+    　　ヘッダー
+  ==============================================================*/
+  .site-nav--sp {
+    position: relative;
+    z-index: 100;
+  }
+
+  .header {
+    width: 100vw;
+    height: 70px;
+    background-color: var(--color-bg-base);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 90;
+    padding: 12px 20px;
+  }
+
+  /* ロゴ */
+  .site-header__brand a {
+    display: inline-block;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 8px;
+    align-items: center;
+  }
+
+  .site-header__brand-img {
+    width: auto;
+    height: 34px;
+    margin-top: 4px;
+  }
+
+  .site-header__brand-text {
+    font-weight: 700;
+    line-height: 1.25;
+  }
+  .site-header__brand-text .is-sub {
+    font-size: 7px;
+  }
+  .site-header__brand-text .is-main {
+    font-size: 20px;
+    letter-spacing: 0.16em;
+  }
+
+  /* ハンバーガー */
+  .hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 34px;
+    height: 34px;
+    outline: none;
+    padding: 0;
+    appearance: none;
+    cursor: pointer;
+    flex-shrink: 0;
+    position: fixed;
+    top: 18px;
+    right: 27px;
+    z-index: 99;
+    transition: all .5s;
+  }
+
+  .hamburger span {
+    display: block;
+    width: 32px;
+    height: 2px;
+    background: var(--color-bg-section);
+    position: relative;
+    opacity: 1;
+    transition: all .5s;
+  }
+
+  .hamburger span::after {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 2px;
+    background: var(--color-bg-section);
+    position: absolute;
+    top: 9px;
+    right: 0;
+    transition: .3s;
+  }
+
+  .hamburger span::before {
+    content: "";
+    display: block;
+    width: 32px;
+    height: 2px;
+    background: var(--color-bg-section);
+    position: absolute;
+    top: -9px;
+    right: 0;
+    transition: .3s;
+  }
+
+  .hamburger.active span::after {
+    width: 32px;
+    height: 2px;
+    top: 1px;
+    right: 0px;
+    transform: rotate(45deg);
+  }
+
+  .hamburger.active span {
+    background-color: #fff;
+  }
+
+  .hamburger.active span::before {
+    width: 32px;
+    height: 2px;
+    top: 1px;
+    right: 0px;
+    transform: rotate(-45deg);
+  }
+
+  /* メニューのデザイン*/
+  .container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88;
+    background: rgba(0, 0, 0, 0.4);
+    background-color: rgba(255, 255, 255, 0.95);
+    transition: .5s;
+    opacity: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+    pointer-events: none;
+    padding-bottom: env(safe-area-inset-bottom);
+    visibility: hidden;
+  }
+
+  .container.active{
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+
+  .container .nav-list {
+    margin: 70px 0 94px;
+    padding: 0;
+    border-top: solid 1px var(--color-line-item);
+  }
+
+  .site-nav--sp .nav-list {
+    text-align: center;
+  }
+
+  .site-nav--sp .nav-list a {
+    display: inline-block;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 20px 15px;
+    border-bottom: solid 1px var(--color-line-item);
+  }
+
+
+  /*==============================================================
+    　　フッター
+  ==============================================================*/
+  #site-footer {
+    background-color: var(--color-bg-section);
+    color: var(--color-text-white);
+  }
+
+  .site-footer__inner {
+    padding: 60px 0 20px;
+  }
+
+  .site-footer__info {
+    text-align: center;
+  }
+
+  /* ロゴ */
+  .site-footer__brand {
+    margin-bottom: 30px;
+  }
+  .site-footer__brand-img {
+    width: auto;
+    height: 64px;
+    margin-bottom: 30px;
+  }
+  .site-footer__brand-title {
+    font-size: 22px;
+    font-weight: 550;
+    letter-spacing: 0.1em;
+  }
+
+  /* 住所 */
+  .site-footer__address {
+    font-size: 15px;
+    letter-spacing: 0.16rem;
+    font-weight: 550;
+    margin-bottom: 40px;
+  }
+
+  /* 電話 */
+  .site-footer__tel {
+    padding: 0 20px 4px 0;
+    margin-bottom: 40px;
+    font-size: 32px;
+    border-bottom: solid 1px var(--color-bg-base);
+    display: grid;
+    grid-template-columns: 50px 260px;
+    align-items: center;
+    justify-content: center;
+  }
+  .site-footer__tel-icon {
+    width: auto;
+    height: 24px;
+    margin: auto 0 auto auto;
+  }
+  .site-footer__tel-link {
+    display: inline-block;
+  }
+
+  .timetabel-img {
+    width: 100%;
+    height: auto;
+    padding: 0 20px 10px;
+  }
+
+  .closed-days {
+    text-align: left;
+    padding: 0 20px;
+    margin-bottom: 70px;
+    font-size: 14px;
+  }
+
+  .site-footer__nav {
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    text-align: center;
+    margin: 0 20px;
+    border-top: solid 1px var(--color-bg-base);
+  }
+
+  .site-footer__nav-item {
+    border-bottom: solid 1px var(--color-bg-base);
+    padding: 15px 0;
+    font-size: 12.5px;
+    font-weight: 550;
+  }
+
+  /* コピー */
+  .site-footer__copy {
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 20px;
+    letter-spacing: 0.05em;
+  }
+
+
+}
+
+
+@media screen and (min-width: 640px) {
+  /* タブレット用レイアウト 640px以上の範囲に収めるデザインはこの中に記述 */
+
+  .sp-nav {
+    display: none;
+  }
+
+  .tb-nav {
+    display: block;
+  }
+
+  /*==============================================================
+    　　TB_ヘッダー
+  ==============================================================*/
+  .header {
+    height: 114px;
+    padding: 24px 30px;
+  }
+
+  /* ロゴ */
+  .site-header__brand a {
+    column-gap: 20px;
+  }
+
+  .site-header__brand-img {
+    height: 56px;
+    margin-top: 4px;
+  }
+
+  .site-header__brand-text .is-sub {
+    font-size: 10.5px;
+  }
+  .site-header__brand-text .is-main {
+    font-size: 32px;
+  }
+
+  /* ハンバーガー */
+  .hamburger {
+    width: 46px;
+    height: 46px;
+    top: 30px;
+    right: 30px;
+  }
+
+  .hamburger span {
+    width: 46px;
+    height: 2px;
+  }
+
+  .hamburger span::after {
+    width: 46px;
+    height: 2px;
+    top: 11px;
+  }
+
+  .hamburger span::before {
+    width: 46px;
+    height: 2px;
+    top: -11px;
+  }
+
+  .hamburger.active span::after {
+    width: 40px;
+  }
+
+  .hamburger.active span::before {
+    width: 40px;
+  }
+
+  /* メニューのデザイン*/
+  .container .nav-list {
+    margin: 114px 0 94px;
+  }
+  .site-nav--sp .nav-list a {
+    font-size: 16px;
+    padding: 30px 15px;
+  }
+
+  /*==============================================================
+    　　TB_フッター
+  ==============================================================*/
+  #site-footer {
+    margin-top: 120px;
+  }
+
+  .site-footer__inner {
+    padding: 40px 0 0;
+  }
+
+  /* ロゴ */
+  .site-footer__brand {
+    margin-bottom: 30px;
+  }
+  .site-footer__brand-img {
+    height: 80px;
+    margin-bottom: 40px;
+  }
+  .site-footer__brand-title {
+    font-size: 26px;
+  }
+
+  /* 住所 */
+  .site-footer__address {
+    font-size: 18px;
+  }
+
+  /* 電話 */
+  .site-footer__tel {
+    max-width: 360px;
+    margin: 0 auto 40px;
+    border-bottom: solid 3px var(--color-bg-base);
+    column-gap: 4px;
+    padding-bottom: 12px;
+  }
+
+  .timetabel-box {
+    max-width: 450px;
+    margin: 0 auto 70px;
+  }
+
+  .timetabel-img {
+    height: auto;
+    padding: 0;
+  }
+
+  .closed-days {
+    margin: 10px auto 0;
+    padding: 0;
+    font-size: 16px;
+  }
+
+  .site-footer__nav {
+    grid-template-columns: repeat(7, auto);
+    grid-template-rows: 1fr;
+    border: none;
+    max-width: 780px;
+    margin: 0 auto 60px;
+  }
+
+  .site-footer__nav-item {
+    border: none;
+    position: relative;
+  }
+
+  .site-footer__nav-item::before {
+    content: '・';
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .site-footer__nav-item.start::before {
+    display: none;
+  }
+
+
+
+
+
+
+
+
+
+
+}
+
+
+@media screen and (min-width: 1024px) {
+  /* パソコン用レイアウト 1024px以上の範囲に収めるデザインはこの中に記述 */
+  /*==============================================================
+    　　PC_ヘッダー
+  ==============================================================*/
+
+
+}
