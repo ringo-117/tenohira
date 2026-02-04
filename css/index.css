@@ -281,17 +281,19 @@
     bottom: 30px;
     left: 24px;
     color: var(--color-text-white);
-    min-width: 90%;
+    /* min-width: 90%; */
   }
 
   .review-title {
     font-size: 18px;
     font-weight: 550;
     margin-bottom: 4px;
+    white-space: nowrap;
   }
 
   .review-personal {
     font-size: 13px;
+    white-space: nowrap;
   }
 
   .review-image {
@@ -318,8 +320,9 @@
     filter: brightness(50%);
   }
   .swiper-slide.soon .review__text-box {
-    top: 50%;
+    position: absolute;
     bottom: auto;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
