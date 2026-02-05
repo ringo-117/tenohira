@@ -3,6 +3,11 @@
 
 @media screen and (min-width: 320px) {
   /* スマホ用レイアウト 320px以上の範囲に収めるデザインはこの中に記述 */
+  #strengths,
+  #availability,
+  #review {
+    scroll-margin-top: 70px;
+  }
 
   /*==============================================================
     　　ヒーロー
@@ -314,29 +319,6 @@
 
 
   /* 準備中 */
-  /* .swiper-slide.soon .review-image img {
-    filter: brightness(50%);
-  } */
-  /* .swiper-slide.soon .review__text-box {
-    position: absolute;
-    bottom: auto;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-
-    display: grid;
-    place-content: center;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-  .swiper-slide.soon .review__text-box .review-title {
-    font-size: 21px;
-    letter-spacing: 0.2em;
-  } */
-
   .review-image.soon {
     position: relative;
   }
@@ -567,6 +549,12 @@
   /* タブレット用レイアウト 640px以上の範囲に収めるデザインはこの中に記述 */
   .sp-only {
     display: none;
+  }
+
+  #strengths,
+  #availability,
+  #review {
+    scroll-margin-top: 40px;
   }
   /*==============================================================
     　　TB_ヒーロー
@@ -1003,6 +991,45 @@
   }
 
   /*==============================================================
+    　　PC-big_てのひらについて
+  ==============================================================*/
+  /*======== アニメーション ========*/
+  /* 詳しく見るリンク */
+  .about-link,
+  .faq-link {
+    transition: all 0.3s ease;
+  }
+  .about-link svg,
+  .faq-link svg {
+    transition: all 0.3s ease;
+  }
+
+  .about-link:hover,
+  .faq-link:hover {
+    opacity: 0.65;
+  }
+
+  .about-link:hover svg,
+  .faq-link:hover svg {
+    margin-right: -10px;
+    transform: scaleX(1.05);
+  }
+
+  /*==============================================================
+    　　PC-big_ご利用について
+  ==============================================================*/
+  /*======== アニメーション ========*/
+  .guide-item a {
+    transition: all 0.3s ease;
+  }
+
+  .guide-item a:hover {
+    opacity: 0.65;
+  }
+
+
+
+  /*==============================================================
     　　PC-big_お客様の声
   ==============================================================*/
   .review-swiper {
@@ -1044,6 +1071,40 @@
   /* 左矢印 */
   .swiper-button-prev img {
     margin-left: 0;
+  }
+
+
+  /*======== アニメーション ========*/
+  .swiper-slide a,
+  .swiper-button-next img,
+  .swiper-button-prev img {
+    transition: all 0.3s ease;
+  }
+
+  .swiper-slide a:hover,
+  .swiper-button-next img:hover,
+  .swiper-button-prev img:hover {
+    opacity: 0.65;
+  }
+
+  .swiper-slide.slide-02 a:hover,
+  .swiper-slide.slide-03 a:hover,
+  .swiper-slide.slide-04 a:hover {
+    opacity: 1;
+  }
+
+  /*==============================================================
+    　　PC-big_よくある質問
+  ==============================================================*/
+  /*======== アニメーション ========*/
+  .faq-title .text-Q__num,
+  .faq-title .title-text {
+    transition: all 0.3s ease;
+  }
+
+  .faq-title:hover .text-Q__num,
+  .faq-title:hover .title-text {
+    opacity: 0.65;
   }
 
 

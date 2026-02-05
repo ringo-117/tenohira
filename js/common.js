@@ -25,6 +25,22 @@
 // }
 
 
+// document.addEventListener('click', (e) => {
+//   const hamburger = e.target.closest('.hamburger');
+//   if (!hamburger) return;
+
+//   const nav = hamburger.closest('.site-nav--sp');
+//   const container = nav.querySelector('.container');
+
+//   const isOpen = hamburger.classList.toggle('active');
+//   container.classList.toggle('active');
+
+//   document.body.classList.toggle('is-menu-open', isOpen);
+// });
+
+
+
+// ハンバーガー開閉
 document.addEventListener('click', (e) => {
   const hamburger = e.target.closest('.hamburger');
   if (!hamburger) return;
@@ -36,6 +52,20 @@ document.addEventListener('click', (e) => {
   container.classList.toggle('active');
 
   document.body.classList.toggle('is-menu-open', isOpen);
+});
+
+// メニュー内リンクを押したら閉じる
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('.nav-list a');
+  if (!link) return;
+
+  const nav = link.closest('.site-nav--sp');
+  const hamburger = nav.querySelector('.hamburger');
+  const container = nav.querySelector('.container');
+
+  hamburger.classList.remove('active');
+  container.classList.remove('active');
+  document.body.classList.remove('is-menu-open');
 });
 
 

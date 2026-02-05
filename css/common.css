@@ -546,12 +546,6 @@ html {
   }
 
 
-
-
-
-
-
-
 }
 
 @media screen and (min-width: 1400px) {
@@ -559,4 +553,57 @@ html {
   /*==============================================================
     　　PC-big_ヘッダー
   ==============================================================*/
+  /*======== アニメーション ========*/
+  .site-header__brand a{
+    transition: all 0.3s ease;
+  }
+  .site-header__brand a:hover {
+    opacity: 0.65;
+  }
+
+  .nav-item a {
+    position: relative;
+  }
+  .nav-item a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-line-item);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+  }
+  .nav-item a:hover::after {
+    width: 90%;
+  }
+
+
+  /* お問い合わせボタン */
+  .contact-btn a {
+    transition: all 0.3s ease;
+    border: solid 1.5px var(--color-bg-section);
+  }
+  .contact-btn a:hover {
+    background-color: var(--color-bg-base);
+    color: var(--color-text-base);
+  }
+  .contact-btn a::after {
+    display: none;
+  }
+
+  /*==============================================================
+    　　PC-big_フッター
+  ==============================================================*/
+  /*======== アニメーション ========*/
+  .site-footer__tel-link,
+  .site-footer__nav-item span {
+    transition: all 0.3s ease;
+  }
+
+  .site-footer__tel-link:hover,
+  .site-footer__nav-item:hover span {
+    opacity: 0.65;
+  }
 }
