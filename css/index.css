@@ -47,34 +47,6 @@
   }
 
   /*==============================================================
-    　　セクション共通
-  ==============================================================*/
-  .sec {
-    padding: 30px 20px;
-  }
-
-  .section-title {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-
-  .section-title__ja {
-    font-size: 26px;
-    font-weight: 600;
-    font-family: var(--font-ja);
-    letter-spacing: 0.14em;
-    line-height: 1.6;
-    white-space: nowrap;
-  }
-
-  .section-title__en {
-    font-size: 13px;
-    color: var(--color-text-sub);
-    letter-spacing: 0.05em;
-    line-height: 1.5;
-  }
-
-  /*==============================================================
     　　こんなお悩みありませんか？
   ==============================================================*/
   .concerns .section-title__ja {
@@ -385,19 +357,6 @@
   }
 
   /*==============================================================
-    　　空き状況
-  ==============================================================*/
-  .availability-calendar {
-    width: 100%;
-    height: auto;
-  }
-  .availability-calendar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  /*==============================================================
     　　よくある質問
   ==============================================================*/
   .faq .section-title {
@@ -578,30 +537,13 @@
   }
 
   /*==============================================================
-    　　TB_セクション共通
-  ==============================================================*/
-  .sec {
-    padding: 120px 20px 30px;
-  }
-
-  .section-title {
-    margin-bottom: 60px;
-  }
-
-  .section-title__ja,
-  .concerns .section-title__ja {
-    font-size: 33px;
-    letter-spacing: 0.14em;
-  }
-
-  .section-title__en {
-    font-size: 16px;
-    margin-top: 1px;
-  }
-
-  /*==============================================================
     　　TB_こんなお悩みありませんか？
   ==============================================================*/
+  .concerns .section-title__ja {
+    font-size: 33px;
+    letter-spacing: 0.4em;
+  }
+
   .concerns-list {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: repeat(2, 1fr);
@@ -763,13 +705,6 @@
   }
 
   /*==============================================================
-    　　TB_空き状況
-  ==============================================================*/
-  .availability-calendar {
-    padding: 0 20px;
-  }
-
-  /*==============================================================
     　　TB_よくある質問
   ==============================================================*/
   .faq {
@@ -787,6 +722,7 @@
   .faq-box .title-text {
     font-size: 18px;
     padding-top: 6px;
+    letter-spacing: 0.1em;
   }
 
   .text-Q {
@@ -811,6 +747,7 @@
     padding: 0 30px 40px;
     font-size: 17px;
     margin-top: -3px;
+    letter-spacing: 0.1em;
   }
 
   /* トグルアイコン */
@@ -818,6 +755,8 @@
     width: 40px;
     height: 40px;
   }
+
+
 
 }
 
@@ -828,20 +767,6 @@
     　　PC_ヒーロー
   ==============================================================*/
 
-  /*==============================================================
-    　　PC_セクション共通
-  ==============================================================*/
-  .sec {
-    max-width: 1120px;
-    padding: 120px 20px 30px;
-    margin: 0 auto;
-  }
-
-  .section-title__ja,
-  .concerns .section-title__ja {
-    font-size: 33px;
-    letter-spacing: 0.2em;
-  }
 
   /*==============================================================
     　　PC_こんなお悩みありませんか？
@@ -889,6 +814,10 @@
   /*==============================================================
     　　PC_てのひらについて
   ==============================================================*/
+  .about {
+    margin: 0 auto;
+  }
+
   .about-inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -950,16 +879,20 @@
   /*==============================================================
     　　PC_よくある質問
   ==============================================================*/
+  .faq {
+    margin: 0 auto;
+  }
+
   .faq-link {
     margin-top: 80px;
   }
 
   .faq-box .title-text {
-    letter-spacing: 0.08em;
+    letter-spacing: 0.14em;
   }
 
   .faq-content .faq-A {
-    letter-spacing: 0.08em;
+    letter-spacing: 0.14em;
     line-height: 1.7;
   }
 
