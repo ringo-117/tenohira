@@ -117,7 +117,7 @@
     height: 200px;
     overflow: hidden;
     margin-top: 80px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
   }
 
   .about-deco__image img {
@@ -261,8 +261,8 @@
   ==============================================================*/
   .about-deco__image {
     height: 400px;
-    margin-top: 160px;
-    margin-bottom: 50px;
+    margin-top: 150px;
+    margin-bottom: 40px;
     padding-right: 56px;
   }
 
