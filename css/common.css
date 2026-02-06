@@ -253,7 +253,8 @@ html {
     　　TOP以外__共通
   ==============================================================*/
   .block-title {
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
+    margin-bottom: 30px;
   }
 
   .block-title span {
@@ -585,7 +586,8 @@ html {
   .block-title {
     display: flex;
     justify-content: center;
-    margin-bottom: 80px;
+    /* margin-bottom: 80px; */
+    margin-bottom: 60px;
   }
 
   .block-title span {
@@ -781,9 +783,9 @@ html {
   /*==============================================================
     　　PC_TOP以外__共通
   ==============================================================*/
-  .block-title {
+  /* .block-title {
     margin-bottom: 100px;
-  }
+  } */
 
   /*==============================================================
     　　PC_ページトップ
