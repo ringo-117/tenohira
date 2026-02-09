@@ -1,0 +1,334 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media screen and (min-width: 320px) {
+  /* スマホ用レイアウト 320px以上の範囲に収めるデザインはこの中に記述 */
+
+  /*==============================================================
+  　　お客様の声
+  ==============================================================*/
+  .review {
+    margin-bottom: 80px;
+  }
+
+  .review .block-title span {
+    line-height: 1.2;
+  }
+  .block-title__personal {
+    font-size: 12px !important;
+    padding: 0 !important;
+    border-bottom: none !important;
+
+    /* color: var(--color-text-sub); */
+    /* font-weight: 400 !important; */
+    line-height: 1.5 !important;
+  }
+
+  .review__image {
+    /* width: 100%;
+    height: 220px;
+    overflow: hidden;
+    margin-bottom: 30px; */
+
+
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    margin: 0 20px 30px;
+  }
+
+  .review__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .review-lead {
+    padding: 0 20px;
+  }
+
+  .review-lead__item {
+    margin-bottom: 30px;
+  }
+
+  .review-lead__title {
+    font-family: var(--font-ja);
+    font-size: 22px;
+    letter-spacing: 0.25rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .review-lead__text {
+    font-size: 14px;
+    letter-spacing: 0.15rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  /*==============================================================
+  　　OTHER VOICES
+  ==============================================================*/
+  /* .sec-line {
+    width: 86.66667%;
+    margin: 92px auto 0;
+    padding-top: 90px;
+    padding-bottom: 20px;
+    border-top: solid 1px rgb(227, 227, 227);
+  } */
+
+  .sec-line {
+    border-top: solid 1px rgb(227, 227, 227);
+    padding: 80px 20px 0;
+    /* margin: 0 20px; */
+  }
+
+
+  .other-box {
+    padding: 0 20px;
+  }
+
+  .other-box a {
+    display: inline-block;
+    margin-bottom: 60px;
+  }
+
+  .other__image {
+    width: auto;
+    height: 100%;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    margin-bottom: 16px;
+  }
+
+  .other__image.soon {
+    position: relative;
+  }
+
+  .other__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .other__image.soon img {
+    filter: brightness(50%);
+  }
+
+  .other__image.soon:before {
+    content: "準備中";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    align-content: center;
+    font-size: 24px;
+    font-weight: 550;
+    letter-spacing: 0.2em;
+    border-radius: 20px;
+    z-index: 9;
+  }
+
+  .other-item__title {
+    font-family: var(--font-ja);
+    font-size: 22px;
+    letter-spacing: 0.25rem;
+    line-height: 1.8;
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+
+  .other-item__name {
+    font-size: 12px;
+    letter-spacing: 0.15rem;
+    line-height: 1.6;
+  }
+
+
+
+}
+
+@media screen and (min-width: 640px) {
+  /* タブレット用レイアウト 640px以上の範囲に収めるデザインはこの中に記述 */
+  /*==============================================================
+  　　TB_お客様の声
+  ==============================================================*/
+  .review {
+    margin-bottom: 120px;
+  }
+
+  .review .block-title {
+    position: relative;
+    margin-bottom: 100px;
+  }
+  .block-title__main {
+    line-height: 1.7 !important;
+  }
+
+  .block-title__personal {
+    position: absolute;
+    bottom: -36px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px !important;
+    letter-spacing: 0.25em !important;
+  }
+
+  .review__image {
+    margin: 0 40px 40px;
+  }
+
+  .review-lead {
+    padding: 0 40px;
+  }
+
+  .review-lead__title {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+
+  .review-lead__text {
+    font-size: 16px;
+    line-height: 2.125;
+    margin-bottom: 40px;
+  }
+
+  /*==============================================================
+  　　TB_OTHER VOICES
+  ==============================================================*/
+  .sec-line {
+    padding: 120px 0 0;
+    margin: 120px 40px 0;
+  }
+
+  .other .block-title__en {
+    letter-spacing: 0.42em;
+  }
+
+  .other-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 40px;
+    column-gap: 30px;
+  }
+
+  .other__image {
+    margin-bottom: 18px;
+  }
+
+  .other__image.soon:before {
+    font-size: 26px;
+  }
+
+  .review-lead__item {
+    margin-bottom: 60px;
+  }
+
+  .other-item__title {
+    font-size: 26px;
+  }
+
+  .other-item__name {
+    font-size: 13px;
+    line-height: 2.125;
+  }
+
+
+
+}
+
+@media screen and (min-width: 1024px) {
+  /* パソコン用レイアウト 1024px以上の範囲に収めるデザインはこの中に記述 */
+  /*==============================================================
+  　　PC_お客様の声
+  ==============================================================*/
+  .review {
+    margin-bottom: 160px;
+  }
+
+  .review-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    max-width: 1120px;
+    padding: 10px 20px 30px;
+    margin: 0 auto;
+  }
+
+  .review__image {
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
+    margin: 0 auto 0 0;
+  }
+
+  .review-lead {
+    padding: 0;
+  }
+
+  /*==============================================================
+  　　PC_OTHER VOICES
+  ==============================================================*/
+  .sec-line {
+    padding: 160px 0 0;
+    margin: 160px 50px 0;
+  }
+  /* .other {
+    max-width: 1120px;
+    padding: 100px 20px 0;
+    margin: 0 auto;
+  } */
+
+  .other-box {
+    max-width: 1120px;
+    padding: 10px 20px 30px;
+    margin: 0 auto;
+    column-gap: 60px;
+    row-gap: 60px;
+  }
+
+  .other-box a {
+    margin-bottom: 0;
+  }
+
+  .other__image.soon:before {
+    font-size: 31px;
+    letter-spacing: 0.3em;
+  }
+
+
+
+
+
+
+
+}
+
+@media screen and (min-width: 1400px) {
+  /* パソコン用レイアウト 1400px以上の範囲に収めるデザインはこの中に記述 */
+  /*==============================================================
+    　　PC-big_お客様の声
+  ==============================================================*/
+  .sec-line {
+    max-width: 1120px;
+    margin: 160px auto 0;
+  }
+  /*======== アニメーション ========*/
+  /* .faq-title .text-Q__num,
+  .faq-title .title-text {
+    transition: all 0.3s ease;
+  }
+
+  .faq-title:hover .text-Q__num,
+  .faq-title:hover .title-text {
+    opacity: 0.65;
+  } */
+
+}
