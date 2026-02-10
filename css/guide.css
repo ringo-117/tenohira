@@ -210,9 +210,15 @@
   ==============================================================*/
   .timetabel__image {
     width: 100%;
-    height: auto;
-    aspect-ratio: 5 / 3;
-    background-color: var(--color-bg-concerns);
+    height: 100%;
+    aspect-ratio: 1353 / 414;
+    /* background-color: var(--color-bg-concerns); */
+  }
+
+  .timetabel__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
 
@@ -514,6 +520,21 @@
 
   .flow-item__text {
     margin-bottom: 20px;
+  }
+
+  /*==============================================================
+  　　PC_料金表
+  ==============================================================*/
+  .price-lead {
+    padding: 0;
+  }
+
+  /*==============================================================
+  　　PC_営業案内
+  ==============================================================*/
+  .timetabel__image {
+    max-width: 1020px;
+    margin: 0 auto;
   }
 
   /*==============================================================
