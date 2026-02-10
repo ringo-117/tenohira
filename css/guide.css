@@ -1,0 +1,624 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@media screen and (min-width: 320px) {
+  /* スマホ用レイアウト 320px以上の範囲に収めるデザインはこの中に記述 */
+
+  #area,
+  #flow,
+  #price,
+  #timetabel {
+    scroll-margin-top: 100px;
+  }
+  /*==============================================================
+  　　ご利用について（リンク）
+  ==============================================================*/
+  .guide-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    text-align: center;
+    gap: 8px;
+    padding: 0 20px;
+  }
+
+  .guide-item {
+    box-shadow: 0 0 4px #0000001f;
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+  }
+
+  .guide-item a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    display: grid;
+    place-content: center;
+    place-items: center;
+  }
+
+  .guide-item__icon {
+    width: auto !important;
+    height: 64px !important;
+    margin-top: 8px;
+  }
+
+  .guide-item__title {
+    font-family: var(--font-ja);
+    font-size: 15px;
+    margin-top: 24px;
+    letter-spacing: 0.25em;
+    font-weight: 500;
+  }
+
+  /* 共通 */
+  .guide-block {
+    margin-bottom: 60px;
+  }
+
+  .guide-inner {
+    padding: 0 20px;
+  }
+
+  /*==============================================================
+  　　対応エリア
+  ==============================================================*/
+  .area__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 5 / 3;
+    background-color: var(--color-bg-concerns);
+    border-radius: 20px;
+    margin-bottom: 30px;
+  }
+
+  .area-box {
+    border: solid 1px var(--color-line-item);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .area-box__title {
+    font-family: var(--font-ja);
+    font-size: 20px;
+    letter-spacing: 0.15rem;
+    line-height: 1.8;
+    border-left: solid 3px var(--color-text-base);
+    font-weight: 600;
+    padding-left: 16px;
+    margin-bottom: 20px;
+  }
+
+  .area-box__item {
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 600;
+    letter-spacing: 0.06rem;
+  }
+
+  .area-box__item span {
+    margin-right: 16px;
+  }
+
+  .notes {
+    font-size: 14px;
+    line-height: 1.5;
+    letter-spacing: 0.15rem;
+  }
+
+  .notes-min {
+    margin-top: 4px;
+  }
+
+
+  /*==============================================================
+  　　施術の流れ
+  ==============================================================*/
+  .flow-item__image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .flow-item__image.left {
+    border-radius: 0 64px 0 0;
+  }
+  .flow-item__image.right {
+    border-radius: 64px 0 0 0;
+  }
+
+  .flow-item__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .flow-item__lead {
+    padding: 0 20px;
+    margin-bottom: 50px;
+  }
+
+  .flow-item__title {
+    font-family: var(--font-ja);
+    font-size: 24px;
+    letter-spacing: 0.25rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+
+  .flow-item__text {
+    font-size: 14px;
+    letter-spacing: 0.15rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+
+  /*==============================================================
+  　　料金表
+  ==============================================================*/
+  .price-lead {
+    font-size: 14px;
+    letter-spacing: 0.15rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+
+  .price-list {
+    /* width: 90%; */
+    border: solid 1px var(--color-text-base);
+    border-bottom: none;
+  }
+  .price-list.end {
+    border-bottom: solid 1px var(--color-text-base);
+  }
+
+  .price-list dt {
+    font-size: 19px;
+    letter-spacing: 0.2rem;
+    padding: 20px 20px;
+    border-bottom: solid 1px var(--color-line-item);
+  }
+
+  .price-list__name {
+    white-space: nowrap;
+    margin-bottom: 12px;
+  }
+  .price-list.end .price-list__name {
+    margin-left: -10px;
+  }
+
+  .price-list__price {
+    text-align: right;
+    line-height: 1.1;
+  }
+  .price-list__price .price-off {
+    font-size: 14px;
+    letter-spacing: 0.16rem;
+  }
+
+  .price-list dd {
+    padding: 15px 20px 15px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-text-sub);
+  }
+
+  /*==============================================================
+  　　営業案内
+  ==============================================================*/
+  .timetabel__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 5 / 3;
+    background-color: var(--color-bg-concerns);
+  }
+
+
+  /*==============================================================
+  　　画像
+  ==============================================================*/
+  .guide-deco__image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    margin-top: 90px;
+    margin-bottom: 46px;
+  }
+
+  .guide-deco__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /*==============================================================
+  　　空き状況
+  ==============================================================*/
+  #availability {
+    padding-bottom: 30px;
+  }
+
+
+}
+
+@media screen and (min-width: 640px) {
+  /* タブレット用レイアウト 640px以上の範囲に収めるデザインはこの中に記述 */
+
+  #area,
+  #flow,
+  #price,
+  #timetabel {
+    scroll-margin-top: 140px;
+  }
+  /*==============================================================
+  　　TB_ご利用について（リンク）
+  ==============================================================*/
+  .guide-list {
+    gap: 30px;
+    padding: 0 40px;
+    margin-top: 8px;
+  }
+
+  .guide-item__icon {
+    height: 130px !important;
+    margin-top: 0;
+  }
+
+  .guide-item__title {
+    font-size: 20px;
+    margin-top: 56px;
+    letter-spacing: 0.25em;
+  }
+
+  /* 共通 */
+  .guide-block {
+    margin-bottom: 120px;
+  }
+
+  .guide-inner {
+    padding: 0 40px;
+  }
+
+  /*==============================================================
+  　　TB_対応エリア
+  ==============================================================*/
+  .area__image {
+    margin-bottom: 40px;
+  }
+
+  .area-box {
+    padding: 30px 40px 32px;
+  }
+
+  .area-box__title {
+    font-size: 24px;
+    border-left: solid 4px var(--color-text-base);
+    letter-spacing: 0.14em;
+  }
+
+  .area-box__item {
+    font-size: 16px;
+  }
+
+  .area-box__item span {
+    margin-right: 20px;
+  }
+
+  .notes {
+    font-size: 16px;
+    line-height: 2.1;
+  }
+
+  .notes-min {
+    margin-top: 2px;
+  }
+
+  /*==============================================================
+  　　TB_施術の流れ
+  ==============================================================*/
+  .flow-item {
+    margin-bottom: 60px;
+  }
+
+  /* 画像 */
+  .flow-item__image {
+    height: 420px;
+    margin-bottom: 40px;
+  }
+  .flow-item__image.left {
+    padding-right: 56px;
+  }
+  .flow-item__image.right {
+    padding-left: 56px;
+  }
+
+  /* 画像（角丸） */
+  .flow-item__image.left img {
+    border-radius: 0 80px 0 0;
+  }
+  .flow-item__image.right img {
+    border-radius: 80px 0 0 0;
+  }
+
+  /* テキスト */
+  .flow-item__lead {
+    padding: 0 56px;
+  }
+
+  .flow-item__title {
+    font-size: 28px;
+    margin-bottom: 26px;
+  }
+
+  .flow-item__text {
+    font-size: 16px;
+    line-height: 2.125;
+    margin-bottom: 40px;
+  }
+
+  /*==============================================================
+  　　TB_料金表
+  ==============================================================*/
+  .price .guide-inner {
+    padding: 0 20px;
+  }
+
+  .price-lead {
+    font-size: 16px;
+    line-height: 2.125;
+    margin-bottom: 50px;
+    padding: 0 20px;
+  }
+
+  .price-list dt {
+    display: grid;
+    grid-template-columns: auto auto;
+    font-size: 28px;
+    letter-spacing: 0.34rem;
+    padding: 40px 40px 30px;
+  }
+
+  .price-list__price {
+    line-height: 1;
+    margin-top: 5.5px;
+  }
+
+  .price-list dd {
+    padding: 30px 40px 30px;
+    font-size: 16px;
+    letter-spacing: 0.1rem;
+    line-height: 1.75;
+  }
+
+
+  /*==============================================================
+  　　TB_画像
+  ==============================================================*/
+  .guide-deco__image {
+    height: 400px;
+    margin-top: 180px;
+    margin-bottom: 30px;
+    padding-right: 56px;
+  }
+
+  .guide-deco__image img {
+    border-radius: 0 160px 0 0;
+  }
+
+
+
+}
+
+@media screen and (min-width: 1024px) {
+  /* パソコン用レイアウト 1024px以上の範囲に収めるデザインはこの中に記述 */
+  #area,
+  #flow,
+  #price,
+  #timetabel {
+    scroll-margin-top: 150px;
+  }
+  /*==============================================================
+  　　PC_ご利用について（リンク）
+  ==============================================================*/
+  .guide-list {
+    max-width: 1120px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    gap: 8px;
+    padding: 0 20px 40px;
+    margin: 0 auto;
+  }
+
+  .guide-item__icon {
+    height: 106px !important;
+    margin-top: 8px;
+  }
+
+  .guide-item__title {
+    font-size: 18px;
+    margin-top: 40px;
+  }
+
+  .guide-inner {
+    margin: 0 30px;
+    padding: 0 20px;
+  }
+
+  /*==============================================================
+  　　PC_対応エリア
+  ==============================================================*/
+  .area-box {
+    padding: 36px 40px 40px;
+  }
+
+  .area-box__title {
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+
+  /*==============================================================
+  　　PC_施術の流れ
+  ==============================================================*/
+  .flow-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 90px;
+  }
+
+  /* 画像 */
+  .flow-item__image {
+    height: 320px;
+    margin-bottom: 0;
+  }
+  .flow-item__image.left {
+    padding-right: 0;
+  }
+  .flow-item__image.right {
+    padding-left: 0;
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  /* 画像（角丸） */
+  .flow-item__image.left img {
+    border-radius: 0 80px 0 0;
+  }
+  .flow-item__image.right img {
+    border-radius: 80px 0 0 0;
+  }
+
+  /* テキスト */
+  .flow-item__lead {
+    width: 380px;
+  }
+
+  .flow-item__lead.right {
+    padding: 0;
+    margin: 0 auto 0 0;
+  }
+  .flow-item__lead.left {
+    padding: 0;
+    margin: 0 0 0 auto;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .flow-item__title {
+    margin-bottom: 40px;
+  }
+
+  .flow-item__text {
+    margin-bottom: 20px;
+  }
+
+  /*==============================================================
+  　　PC_画像
+  ==============================================================*/
+  .guide-deco__image {
+    height: 420px;
+    margin-top: 190px;
+    margin-bottom: 60px;
+  }
+
+  .guide-deco__image img {
+    object-position: 50% 25%;
+  }
+
+
+}
+
+@media screen and (min-width: 1400px) {
+  /* パソコン用レイアウト 1400px以上の範囲に収めるデザインはこの中に記述 */
+  /*==============================================================
+    　　PC-big_ご利用について（リンク）
+  ==============================================================*/
+  /* 共通 */
+  .guide-block {
+    margin-bottom: 160px;
+  }
+
+  /* 共通 */
+  .guide-inner {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .guide-list {
+    padding: 0 0 40px;
+  }
+
+  /*======== アニメーション ========*/
+  .guide-item a {
+    transition: all 0.3s ease;
+  }
+
+  .guide-item a:hover {
+    opacity: 0.65;
+  }
+
+  /*==============================================================
+  　　PC-big_対応エリア
+  ==============================================================*/
+  .area__image {
+    margin-bottom: 60px;
+  }
+
+  /*==============================================================
+  　　PC-big_施術の流れ
+  ==============================================================*/
+  .flow .block-title {
+    margin-bottom: 80px;
+  }
+
+  .flow-item {
+    grid-template-columns: 1fr 1.1fr;
+    column-gap: 100px;
+  }
+
+  /* 画像 */
+  .flow-item__image {
+    height: 480px;
+    margin-bottom: 40px;
+  }
+
+  /* 画像（角丸） */
+  .flow-item__image.left img {
+    border-radius: 0 120px 0 0;
+  }
+  .flow-item__image.right img {
+    border-radius: 120px 0 0 0;
+  }
+
+  /* テキスト */
+  .flow-item__lead {
+    min-width: 435px;
+    width: fit-content;
+    max-width: 620px;
+  }
+  .flow-item__lead.right {
+    margin: 0 auto 0 0;
+  }
+  .flow-item__lead.left {
+    margin: 0 0 0 auto;
+  }
+
+  /*==============================================================
+  　　PC-big_料金表
+  ==============================================================*/
+  .price-list__price .price-num {
+    font-size: 32px;
+  }
+
+  /*==============================================================
+  　　PC-big_画像
+  ==============================================================*/
+  .guide-deco__image {
+    height: 500px;
+    padding-right: 86px;
+  }
+
+
+}
