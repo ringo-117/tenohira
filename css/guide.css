@@ -194,7 +194,7 @@
     line-height: 1.1;
   }
   .price-list__price .price-off {
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 0.16rem;
   }
 
@@ -383,6 +383,9 @@
   .price-list__price {
     line-height: 1;
     margin-top: 5.5px;
+  }
+  .price-list__price .price-off {
+    font-size: 14px;
   }
 
   .price-list dd {

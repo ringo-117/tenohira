@@ -48,7 +48,8 @@ html {
 
   .tb-nav,
   .pc-only,
-  .site-nav--pc {
+  .site-nav--pc,
+  .pc-big-only {
     display: none;
   }
 
@@ -827,6 +828,9 @@ html {
 
 @media screen and (min-width: 1400px) {
   /* PC全画面用レイアウト 1400px以上の範囲に収めるデザインはこの中に記述 */
+  .pc-big-only {
+    display: none;
+  }
   /*==============================================================
     　　PC-big_ヘッダー
   ==============================================================*/
