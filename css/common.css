@@ -221,6 +221,32 @@ html {
     border-bottom: solid 1px var(--color-line-item);
   }
 
+  /*==============　電話　===============*/
+  .site-header__tel {
+    display: inline-block;
+    position: fixed;
+    top: 14px;
+    right: 80px;
+    z-index: 90;
+  }
+
+  .site-header__tel .tel-box {
+    background-color: var(--color-bg-section);
+    border: solid 1px var(--color-bg-section);
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-content: center;
+  }
+
+  .site-footer__tel-icon {
+    width: auto !important;
+    height: 19px !important;
+  }
+
+
   /*==============================================================
     　　セクション共通
   ==============================================================*/
@@ -248,6 +274,21 @@ html {
     color: var(--color-text-sub);
     letter-spacing: 0.05em;
     line-height: 1.5;
+  }
+
+  /*==============================================================
+    　　LINE追従
+  ==============================================================*/
+  .line-btn {
+    position: fixed;
+    right: 15px;
+    bottom: 20px;
+    z-index: 90;
+  }
+
+  .line-btn img {
+    width: 80px;
+    height: 80px;
   }
 
   /*==============================================================
@@ -560,6 +601,21 @@ html {
     padding: 30px 15px;
   }
 
+  /*==============　電話　===============*/
+  .site-header__tel {
+    top: 21px;
+    right: 100px;
+  }
+
+  .site-header__tel .tel-box {
+    width: 60px;
+    height: 60px;
+  }
+
+  .site-footer__tel-icon {
+    height: 28px !important;
+  }
+
   /*==============================================================
     　　TB_セクション共通
   ==============================================================*/
@@ -581,6 +637,19 @@ html {
   .section-title__en {
     font-size: 16px;
     margin-top: 1px;
+  }
+
+  /*==============================================================
+    　　TB_LINE追従
+  ==============================================================*/
+  .line-btn {
+    right: 35px;
+    bottom: 40px;
+  }
+
+  .line-btn img {
+    width: 98px;
+    height: 98px;
   }
 
   /*==============================================================
@@ -750,7 +819,7 @@ html {
   ==============================================================*/
   .site-nav--pc .nav-list {
     display: grid;
-    grid-template-columns: repeat(6, auto);
+    grid-template-columns: repeat(7, auto);
     align-items: center;
     font-size: 14px;
     font-weight: 600;
@@ -768,6 +837,18 @@ html {
     margin: 0 6px 0 20px;
   }
 
+  /*==============　電話　===============*/
+  .header__tel-btn img {
+    width: auto;
+    height: 27px;
+  }
+
+  /* LINE */
+  .header__tel-btn a {
+    margin-right: -3px;
+  }
+
+
   /*==============================================================
     　　PC_セクション共通
   ==============================================================*/
@@ -780,8 +861,14 @@ html {
   .section-title__ja,
   .concerns .section-title__ja {
     font-size: 33px;
-    /* letter-spacing: 0.2em; */
     text-align: center;
+  }
+
+  /*==============================================================
+    　　PC_LINE追従
+  ==============================================================*/
+  .line-btn {
+    display: none;
   }
 
   /*==============================================================
@@ -822,6 +909,8 @@ html {
   .site-footer__nav-item {
     font-size: 13px;
   }
+
+
 
 
 }
@@ -874,6 +963,17 @@ html {
     display: none;
   }
 
+  /* LINE */
+  .header__tel-btn a {
+    transition: all 0.3s ease;
+  }
+  .header__tel-btn a:hover {
+    opacity: 0.65;
+  }
+  .header__tel-btn a::after {
+    display: none;
+  }
+
   /*==============================================================
     　　PC-big_ページトップ
   ==============================================================*/
@@ -904,6 +1004,7 @@ html {
   .breadcrumbs a:hover {
     opacity: 0.65;
   }
+
 
   /*==============================================================
     　　PC-big_空き状況
