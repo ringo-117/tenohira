@@ -5,7 +5,7 @@ body {
   font-family: -apple-system, "Helvetica Neue", "Hiragino Kaku Gothic ProN", "游ゴシック", "メイリオ", meiryo, sans-serif;
   font-feature-settings: 'palt' 1;
   color: var(--color-text-base);
-  background-color: var(--color-bg-bas);
+  background-color: var(--color-bg-base);
   letter-spacing: 0.1em;
   line-height: 1.5;
 }
@@ -47,6 +47,7 @@ html {
   /* スマホ用レイアウト 320px以上の範囲に収めるデザインはこの中に記述 */
 
   .tb-nav,
+  .tb-only,
   .pc-only,
   .site-nav--pc,
   .pc-big-only {
@@ -86,14 +87,14 @@ html {
 
   .site-header__brand-img {
     width: auto;
-    height: 40px;
+    height: 42px;
     margin-top: 2px;
   }
 
   .site-header__brand-text {
     font-weight: 700;
     line-height: 1.25;
-    margin-top: -3px;
+    margin-top: -5px;
   }
   .site-header__brand-text .is-sub {
     font-size: 7px;
@@ -435,8 +436,8 @@ html {
   }
   .site-footer__brand-img {
     width: auto;
-    height: 64px;
-    margin-bottom: 30px;
+    height: 68px;
+    margin-bottom: 27.5px;
   }
   .site-footer__brand-title {
     font-size: 22px;
@@ -526,6 +527,7 @@ html {
     display: none;
   }
 
+  .tb-only,
   .tb-nav {
     display: block;
   }
@@ -544,12 +546,13 @@ html {
   }
 
   .site-header__brand-img {
-    height: 64px;
-    margin-top: 0;
+    /* height: 64px; */
+    height: 70px;
+    margin-top: -4px;
   }
 
   .site-header__brand-text {
-    margin-top: -3px;
+    margin-top: -4px;
   }
 
   .site-header__brand-text .is-sub {
@@ -603,7 +606,7 @@ html {
 
   /*==============　電話　===============*/
   .site-header__tel {
-    top: 21px;
+    top: 22px;
     right: 100px;
   }
 
@@ -728,7 +731,7 @@ html {
   }
 
   .site-footer__inner {
-    padding: 40px 0 0;
+    padding: 44px 0 0;
   }
 
   /* ロゴ */
@@ -736,8 +739,9 @@ html {
     margin-bottom: 30px;
   }
   .site-footer__brand-img {
-    height: 80px;
-    margin-bottom: 40px;
+    /* height: 80px; */
+    height: 86px;
+    margin-bottom: 36px;
   }
   .site-footer__brand-title {
     font-size: 26px;
@@ -806,7 +810,8 @@ html {
 
 @media screen and (min-width: 1024px) {
   /* パソコン用レイアウト 1024px以上の範囲に収めるデザインはこの中に記述 */
-  .site-nav--sp {
+  .site-nav--sp,
+  .tb-only {
     display: none;
   }
 
@@ -817,6 +822,16 @@ html {
   /*==============================================================
     　　PC_ヘッダー
   ==============================================================*/
+  /* ロゴ */
+  .site-header__brand-img {
+    height: 72px;
+    margin-top: -5px;
+  }
+
+  .site-header__brand-text {
+    margin-top: -6px;
+  }
+
   .site-nav--pc .nav-list {
     display: grid;
     grid-template-columns: repeat(7, auto);
@@ -899,7 +914,13 @@ html {
   }
 
   .site-footer__inner {
-    padding: 50px 0 0;
+    padding: 54px 0 0;
+  }
+
+  /* ロゴ */
+  .site-footer__brand-img {
+    height: 90px;
+    margin-bottom: 35px;
   }
 
   .site-footer__nav {
@@ -909,8 +930,6 @@ html {
   .site-footer__nav-item {
     font-size: 13px;
   }
-
-
 
 
 }
