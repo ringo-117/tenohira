@@ -43,6 +43,15 @@ html {
   scroll-margin-top: 60px;
 }
 
+/* ヘッダーは常に画面上部に固定 */
+#site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
 @media screen and (min-width: 320px) {
   /* スマホ用レイアウト 320px以上の範囲に収めるデザインはこの中に記述 */
 
@@ -356,7 +365,11 @@ html {
   .page-title__en {
     font-size: 13px;
     font-weight: 400;
-    text-shadow: 0 0 5px #fff;
+    text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 10px #fff,
+    0 0 15px #fff;
     /* color: var(--color-text-sub); */
     margin-top: 2px;
     /* opacity: 0.8; */
@@ -413,6 +426,20 @@ html {
     object-fit: cover;
   }
 
+  .availability .notes {
+    font-size: 13px;
+    line-height: 1.6;
+    margin-top: 16px;
+    letter-spacing: 0.16em;
+    margin-bottom: 8px;
+  }
+
+  .availability .notes span {
+    position: relative;
+    top: -1.5px;
+    margin-right: 2px;
+  }
+
   /*==============================================================
     　　フッター
   ==============================================================*/
@@ -436,9 +463,18 @@ html {
   }
   .site-footer__brand-img {
     width: auto;
-    height: 68px;
-    margin-bottom: 27.5px;
+    height: 72px;
+    margin-bottom: 18px;
   }
+  /* .site-footer__brand-img {
+    background-color: var(--color-bg-base);
+    width: auto;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 23px;
+    padding: 7px;
+    fill: #fff !important;
+  } */
   .site-footer__brand-title {
     font-size: 22px;
     font-weight: 550;
@@ -476,20 +512,30 @@ html {
     display: inline-block;
   }
 
+  /* 営業日 */
   .timetabel-img {
     width: 100%;
     height: auto;
-    padding: 0 20px 10px;
+    padding: 0 20px 12px;
   }
 
   .closed-days {
     text-align: left;
     padding: 0 20px;
-    margin-bottom: 50px;
     font-size: 14px;
   }
   .closed-days__title {
     margin-right: 10px;
+  }
+
+  .timetabel-box__notes {
+    font-size: 13px;
+    margin-top: 10px;
+    letter-spacing: 0.15rem;
+    line-height: 1.6;
+    padding: 0 20px;
+    margin-bottom: 50px;
+    text-align: left;
   }
 
   .site-footer__nav {
@@ -523,7 +569,8 @@ html {
   /* タブレット用レイアウト 640px以上の範囲に収めるデザインはこの中に記述 */
 
   .sp-nav,
-  .sp-only {
+  .sp-only,
+  .tb-none {
     display: none;
   }
 
@@ -700,6 +747,10 @@ html {
 
   .page-title__en {
     font-size: 16px;
+    text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 15px #fff;
   }
 
   /*==============　パンくずリスト　===============*/
@@ -713,14 +764,18 @@ html {
     margin: 0 14px 0 10px;
   }
 
-
-
   /*==============================================================
     　　TB_空き状況
   ==============================================================*/
   .availability-calendar {
     padding: 0 20px;
     aspect-ratio: 1 / 0.9;
+  }
+
+  .availability .notes {
+    font-size: 15px;
+    padding: 0 20px;
+    margin-top: 18px;
   }
 
   /*==============================================================
@@ -740,8 +795,9 @@ html {
   }
   .site-footer__brand-img {
     /* height: 80px; */
-    height: 86px;
-    margin-bottom: 36px;
+    height: 88px;
+    margin-top: 10px;
+    margin-bottom: 18px;
   }
   .site-footer__brand-title {
     font-size: 26px;
@@ -761,6 +817,7 @@ html {
     padding-left: 14px;
   }
 
+  /* 営業日 */
   .timetabel-box {
     max-width: 450px;
     margin: 0 auto 70px;
@@ -772,9 +829,20 @@ html {
   }
 
   .closed-days {
-    margin: 10px auto 0;
+    margin: 12px auto 0;
     padding: 0;
     font-size: 16px;
+  }
+
+  .timetabel-box__notes {
+    padding: 0;
+  }
+
+  .timetabel-box__notes {
+    font-size: 14px;
+    margin-top: 12px;
+    letter-spacing: 0.15rem;
+    line-height: 1.6;
   }
 
   .site-footer__nav {
@@ -815,6 +883,7 @@ html {
     display: none;
   }
 
+  .tb-none,
   .pc-only,
   .site-nav--pc {
     display: block;
@@ -844,12 +913,29 @@ html {
     padding: 20px 15px;
   }
 
+  .site-nav--pc .contact-btn {
+    position: relative;
+  }
+
   .nav-item.contact-btn a {
     background-color: var(--color-bg-section);
     color: var(--color-text-white);
     border-radius: 50px;
-    padding: 16px 46px;
+    padding: 16px 36px 16px 56px;
     margin: 0 6px 0 20px;
+  }
+
+  .contact-btn__tel-icon {
+    position: absolute;
+    top: -1px;
+    left: 48px;
+  }
+
+  .nav-item.contact-btn a svg {
+    transition: all 0.3s ease;
+    width: auto;
+    height: 17px;
+    fill: #fff;
   }
 
   /*==============　電話　===============*/
@@ -905,6 +991,12 @@ html {
     padding: 0;
   }
 
+  .availability .notes {
+    font-size: 16px;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
 
   /*==============================================================
     　　PC_フッター
@@ -920,7 +1012,14 @@ html {
   /* ロゴ */
   .site-footer__brand-img {
     height: 90px;
-    margin-bottom: 35px;
+    margin-bottom: 20px;
+  }
+
+  .timetabel-box__notes {
+    font-size: 13px;
+    margin-top: 9px;
+    line-height: 1.8;
+    white-space: nowrap;
   }
 
   .site-footer__nav {
@@ -982,6 +1081,17 @@ html {
     display: none;
   }
 
+  .contact-btn__tel-icon {
+    position: absolute;
+    top: 12.5px;
+    left: 30px;
+  }
+
+  .contact-btn__tel-icon svg {
+    height: 19px;
+  }
+
+  /*======== アニメーション ========*/
   /* LINE */
   .header__tel-btn a {
     transition: all 0.3s ease;
@@ -991,6 +1101,11 @@ html {
   }
   .header__tel-btn a::after {
     display: none;
+  }
+
+  /* 電話 */
+  .nav-item.contact-btn:hover a svg {
+    fill: var(--color-bg-section);
   }
 
   /*==============================================================
@@ -1009,6 +1124,7 @@ html {
     left: 96px;
     padding: 80px 0 120px 90px;
   }
+
 
   /*==============　パンくずリスト　===============*/
   .breadcrumbs {
@@ -1035,6 +1151,12 @@ html {
   /*==============================================================
     　　PC-big_フッター
   ==============================================================*/
+  /* ロゴ */
+  .site-footer__brand-img {
+    margin-bottom: 18px;
+    margin-top: 0;
+  }
+
   /*======== アニメーション ========*/
   .site-footer__tel-link,
   .site-footer__nav-item span {

@@ -101,10 +101,15 @@
     line-height: 1.8;
     font-weight: 600;
     letter-spacing: 0.06rem;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: fit-content;
+    column-gap: 20px;
   }
 
   .area-box__item span {
-    margin-right: 16px;
+    /* margin-right: 16px; */
+    white-space: nowrap;
   }
 
   .notes {
@@ -138,6 +143,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .flow-02 .flow-item__image img {
+    object-position: 0% 77%;
   }
 
   .flow-item__lead {
@@ -208,7 +217,6 @@
     padding: 15px 20px 15px;
     font-size: 14px;
     line-height: 1.5;
-    color: var(--color-text-sub);
   }
 
   /*==============================================================
@@ -217,13 +225,13 @@
   .timetabel__image {
     width: 100%;
     height: 100%;
-    aspect-ratio: 1353 / 414;
+    /* aspect-ratio: 1353 / 414; */
     /* background-color: var(--color-bg-concerns); */
   }
 
   .timetabel__image img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
   }
 
@@ -231,8 +239,46 @@
     font-weight: 550;
     padding: 0;
     margin: 0;
-    margin-top: 9px;
+    margin-top: 12px;
   }
+
+  .guide-block .timetabel-notes {
+    font-size: 13px;
+    margin-top: 12px;
+    letter-spacing: 0.15rem;
+    line-height: 1.6;
+  }
+
+  /*==============================================================
+  　　ご利用時のお願い
+  ==============================================================*/
+  .notes-item__title {
+    position: relative;
+    font-size: 18.5px;
+    font-weight: 600;
+    padding-left: 20px;
+    margin-bottom: 10px;
+  }
+
+  .notes-item__title::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: var(--color-bg-section);
+  }
+
+  .notes-item__text {
+    font-size: 14px;
+    letter-spacing: 0.15rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+
 
 
   /*==============================================================
@@ -320,11 +366,13 @@
 
   .area-box__item {
     font-size: 16px;
+    grid-template-columns: repeat(5, auto);
+    column-gap: 24px;
   }
 
-  .area-box__item span {
+  /* .area-box__item span {
     margin-right: 20px;
-  }
+  } */
 
   .notes {
     font-size: 16px;
@@ -360,6 +408,10 @@
   }
   .flow-item__image.right img {
     border-radius: 80px 0 0 0;
+  }
+
+  .flow-02 .flow-item__image img {
+    object-position: 0% 78%;
   }
 
   /* テキスト */
@@ -421,6 +473,42 @@
   .timetabel .closed-days {
     font-size: 18px;
     margin-top: 10px;
+  }
+
+  .timetabel__text-box {
+    display: flex;
+  }
+
+  .guide-block .timetabel-notes {
+    font-size: 15px;
+    margin-top: 9px;
+    line-height: 1.8;
+    margin-left: 40px;
+  }
+
+  /*==============================================================
+  　　TB_ご利用時のお願い
+  ==============================================================*/
+  .notes-item__title {
+    font-size: 26px;
+    padding-left: 28px;
+    margin-bottom: 10px;
+    letter-spacing: 0.25rem;
+  }
+
+  .notes-item__title::before {
+    width: 16.5px;
+    height: 16.5px;
+  }
+
+  .notes-item__text {
+    font-size: 16px;
+    line-height: 2.125;
+    margin-bottom: 50px;
+  }
+
+  .end .notes-item__text {
+    margin-bottom: 0;
   }
 
 
@@ -493,6 +581,12 @@
     padding-left: 20px;
   }
 
+  .area-box__item {
+    font-size: 16px;
+    grid-template-columns: repeat(7, auto);
+    column-gap: 26px;
+  }
+
   /*==============================================================
   　　PC_施術の流れ
   ==============================================================*/
@@ -563,11 +657,42 @@
     margin: 0 auto;
   }
 
-  .timetabel .closed-days {
+  .timetabel__text-box {
     max-width: 1020px;
     margin: 20px auto 0;
+  }
+
+  .timetabel .closed-days {
     font-size: 22px;
   }
+
+  .guide-block .timetabel-notes {
+    font-size: 16px;
+    margin-left: 132px;
+    margin-left: 80px;
+    line-height: 2;
+    margin-bottom: 40px;
+    margin-top: 9px;
+  }
+
+  /*==============================================================
+  　　PC_ご利用時のお願い
+  ==============================================================*/
+  .notes .guide-inner {
+    max-width: 1020px;
+    margin: 0 auto 0;
+    padding: 0;
+    padding-top: 10px;
+  }
+
+  .notes-item__title {
+    padding-left: 30px;
+  }
+
+  .notes-item__text {
+    margin-bottom: 70px;
+  }
+
 
   /*==============================================================
   　　PC_画像

@@ -28,17 +28,17 @@
     </script>
 
     <!-- OGP -->
-    <meta property="og:title" content="">
-    <meta property="og:description" content="">
-    <!-- <meta property="og:image" content="https://tenohiraokagaki.com/img/ogp.webp"> -->
+    <meta property="og:title" content="【公式】岡垣町の​自費訪問リハビリての​ひら｜脳卒中後遺症にも​対応">
+    <meta property="og:description" content="遠賀郡岡垣町を​拠点に、​病院への​通院が​難しい​方や、​リハビリ期間終了後も​痛みが​残っている方、​脳卒中後遺症などで​お悩みの​方に​向けて、​専門の​理学療法士が​ご自宅へ​訪問する​「自費訪問リハビリ」を​行っています。​">
+    <meta property="og:image" content="https://tenohiraokagaki.com/img/ogp.webp">
     <meta property="og:url" content="https://tenohiraokagaki.com/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="自費訪問リハビリてのひら">
     <meta property="og:locale" content="ja_JP">
 
     <!-- SEO -->
-    <title></title>
-    <meta name="description" content="">
+    <title>【公式】岡垣町の​自費訪問リハビリての​ひら｜脳卒中後遺症にも​対応</title>
+    <meta name="description" content="遠賀郡岡垣町を​拠点に、​病院への​通院が​難しい​方や、​リハビリ期間終了後も​痛みが​残っている方、​脳卒中後遺症などで​お悩みの​方に​向けて、​専門の​理学療法士が​ご自宅へ​訪問する​「自費訪問リハビリ」を​行っています。​">
 
     <!-- フォント：Noto Sans JP -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,24 +47,50 @@
 
 
     <!-- ファビコン -->
-    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="shortcut icon" href="img/logo/favicon.png">
 
     <!-- swiper css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!-- css -->
     <link rel="stylesheet" href="css/destyle.css">
     <link rel="stylesheet" href="css/common.css?v=2.3">
-    <link rel="stylesheet" href="css/index.css?v=1.9">
+    <link rel="stylesheet" href="css/index.css?v=3.1">
   </head>
 
 
   <body>
     <!-- ヘッダー -->
-    <div id="site-header"></div>
+    <div id="site-header-mount"></div>
 
     <main class="main-inner">
       <!-- LINE追従 -->
       <div id="line-bottom"></div>
+
+      <!-- モーダル -->
+      <div class="modal-box">
+        <article class="modal-container">
+          <div class="close"><span>&times;</span></div>
+          <div class="modal-item">
+            <p class="modal-item__title">サービス開始のお知らせ</p>
+            <p class="modal-item__lead">下記の日程でサービスを<br class="sp-only">開始いたします。</p>
+
+            <div class="day-box">
+              <div class="day-item">
+                <p class="day-item__title">事前予約開始</p>
+                <p class="day-item__day"><span class="day-num">2026</span>年<span class="day-num">3</span>月<span class="day-num">12</span>日</p>
+              </div>
+              <div class="day-item">
+                <p class="day-item__title">施術開始</p>
+                <p class="day-item__day"><span class="day-num">2026</span>年<span class="day-num">4</span>月<span class="day-num">1</span>日</p>
+              </div>
+            </div>
+
+            <p class="modal-item__text">皆さまのご利用を<br class="sp-only">心よりお待ちしております。</p>
+          </div>
+
+        </article>
+        <div class="modal-bg"></div>
+      </div>
 
       <!-- ヒーロー -->
       <section class="hero">
@@ -73,17 +99,22 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide slide-01">
               <figure class="hero__image">
-                <img src="img/hero/hero-main.webp" alt="ヒーロー画像01">
+                <img src="img/hero/hero-01.webp?v=1.0" alt="ヒーロー画像01">
               </figure>
             </div>
             <div class="swiper-slide slide-02">
               <figure class="hero__image">
-                <img src="img/thumb/thumb-strengths-02.png" alt="ヒーロー画像02">
+                <img src="img/hero/hero-02.webp?v=1.0" alt="ヒーロー画像02">
               </figure>
             </div>
             <div class="swiper-slide slide-03">
               <figure class="hero__image">
-                <img src="img/thumb/thumb-strengths-03.png" alt="ヒーロー画像03">
+                <img src="img/hero/hero-03.webp?v=1.0" alt="ヒーロー画像03">
+              </figure>
+            </div>
+            <div class="swiper-slide slide-04">
+              <figure class="hero__image">
+                <img src="img/hero/hero-04.webp?v=1.0" alt="ヒーロー画像04">
               </figure>
             </div>
           </div>
@@ -100,9 +131,9 @@
         </div>
 
         <article class="concerns-list">
-          <div class="concerns-item">
+          <div class="concerns-item item-01">
             <div class="concerns-item__text-bg">
-              <p>整形外科に通ったけど<br>よくならなかった</p>
+              <p>整形外科に通院しているが、<br>日常生活でのケアも<br class="tb-none">取り入れたい方</p>
             </div>
             <img class="concerns-item__img" src="img/section/section-concerns-01.png" aria-hidden="true">
           </div>
@@ -137,7 +168,7 @@
         <ul class="strengths-list">
           <li class="strengths-item">
             <div class="strengths-item__image">
-              <img src="img/thumb/thumb-strengths-01.png" alt="訪問リハビリ">
+              <img src="img/thumb/thumb-strengths-01.webp" alt="訪問リハビリ">
             </div>
             <div class="strengths-lead">
               <h3 class="strengths-lead__title">訪問リハビリ</h3>
@@ -164,7 +195,7 @@
           </li>
           <li class="strengths-item end">
             <div class="strengths-item__image">
-              <img src="img/thumb/thumb-strengths-04.png" alt="期間に縛られない">
+              <img src="img/thumb/thumb-strengths-04.webp" alt="期間に縛られない">
             </div>
             <div class="strengths-lead">
               <h3 class="strengths-lead__title">期間に縛られない</h3>
@@ -197,7 +228,7 @@
             <p>詳しくみる</p>
           </a>
           <figure class="about-image">
-            <img src="img/section/section-about.png" alt="院長">
+            <img src="img/section/section-about.webp" alt="院長">
           </figure>
         </div>
       </section>
@@ -274,7 +305,7 @@
             <div class="swiper-slide slide-01">
               <a href="review-01.html">
                 <figure class="review-image">
-                  <img src="img/thumb/thumb-review-01.png" alt="下半身麻痺のリハビリ">
+                  <img src="img/thumb/thumb-review-01.webp" alt="下半身麻痺のリハビリ">
                 </figure>
                 <div class="review__text-box">
                   <p class="review-title">下半身麻痺のリハビリ</p>
@@ -285,7 +316,7 @@
             <div class="swiper-slide slide-02">
               <a>
                 <figure class="review-image soon">
-                  <img src="img/thumb/thumb-review-01.png" alt="お客様の声-02">
+                  <img src="img/thumb/thumb-review-01.webp" alt="お客様の声-02">
                 </figure>
                 <div class="review__text-box">
                   <!-- <p class="review-title">準備中</p> -->
@@ -295,7 +326,7 @@
             <div class="swiper-slide slide-03">
               <a>
                 <figure class="review-image soon">
-                  <img src="img/thumb/thumb-review-01.png" alt="お客様の声-03">
+                  <img src="img/thumb/thumb-review-01.webp" alt="お客様の声-03">
                 </figure>
                 <div class="review__text-box">
                   <!-- <p class="review-title">準備中</p> -->
@@ -305,7 +336,7 @@
             <div class="swiper-slide slide-04">
               <a>
                 <figure class="review-image soon">
-                  <img src="img/thumb/thumb-review-01.png" alt="お客様の声-04">
+                  <img src="img/thumb/thumb-review-01.webp" alt="お客様の声-04">
                 </figure>
                 <div class="review__text-box">
                   <!-- <p class="review-title">準備中</p> -->
@@ -349,7 +380,8 @@
               <div class="faq-A">
                 <span class="text-A__num">A</span>
                 <div class="con-text">
-                  <p>現金・PayPay・銀行振込に対応しています。<br>キャッシュレスをご希望の方は事前にお知らせください。</p>
+                  <p>現在は現金のみのお取り扱いとなっております。<br>
+                  クレジットカードや電子決済には対応しておりません。</p>
                 </div>
               </div>
             </div>
@@ -368,7 +400,7 @@
               <div class="faq-A">
                 <span class="text-A__num">A</span>
                 <div class="con-text">
-                  <p>当サービスは自費（保険外）となります。<br>その分、症状・生活に合わせて柔軟な施術が可能です。</p>
+                  <p>てのひらは自費サービスのため、公的保険はご利用いただけません。<br>その分、期間や回数に制限なく、お一人おひとりの状態に合わせて柔軟にご利用いただけます。</p>
                 </div>
               </div>
             </div>
@@ -417,7 +449,7 @@
             <label class="faq-title" for="toggle05">
               <div class="text-Q">
                 <span class="text-Q__num">Q</span>
-                <p class="title-text">痛みが強い場合でも施術できますか？</p>
+                <p class="title-text">痛みが強いのですが大丈夫ですか？</p>
                 <img class="faq-icon" src="img/icon/icon-arrow.png">
               </div>
             </label>
@@ -425,7 +457,7 @@
               <div class="faq-A">
                 <span class="text-A__num">A</span>
                 <div class="con-text">
-                  <p>状態に合わせて、行いますのでご安心ください。</p>
+                  <p>無理のない範囲で進めていきますのでご安心ください。</p>
                 </div>
               </div>
             </div>
@@ -444,7 +476,7 @@
     </main>
 
     <!-- フッター -->
-    <div id="site-footer"></div>
+    <div id="site-footer-mount"></div>
 
     <!-- swiper js -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -452,7 +484,8 @@
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/slider.js?v=1.1"></script>
-    <script src="js/include.js?v=1.3"></script>
+    <script src="js/include.js?v=1.4"></script>
+    <script src="js/modal.js?v=1.3"></script>
     <script src="js/common.js?v=1.2"></script>
   </body>
 </html>

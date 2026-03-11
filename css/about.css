@@ -32,6 +32,9 @@
     height: 100%;
     object-fit: cover;
   }
+   .features-item__image.left img {
+    object-position: 50% 100%;
+  }
 
   .features-item__lead {
     padding: 0 20px;
@@ -54,7 +57,7 @@
   }
 
   /*==============================================================
-  　　院長の紹介
+  　　代表の紹介
   ==============================================================*/
   .director__image {
     width: 100%;
@@ -67,14 +70,16 @@
   }
 
   .director__image img {
-    width: 100%;
-    height: 100%;
+    width: 155%;
+    height: 155%;
+    margin-top: -15px;
+    margin-left: -120px;
     object-fit: cover;
-    object-position: 50% 14%;
+    object-position: 100% 50%;
   }
 
   .director-item__lead {
-    padding: 0 20px;
+    padding: 0 20px 2px;
   }
 
   .director-item__title {
@@ -230,17 +235,26 @@
   }
 
   /*==============================================================
-  　　TB_院長の紹介
+  　　TB_代表の紹介
   ==============================================================*/
   .director__image {
+    width: calc(100% - 40px);
+    margin-right: 40px;
     height: 420px;
     margin-bottom: 40px;
-    padding-right: 40px;
+    /* padding-right: 40px; */
+    overflow: hidden;
+    border-radius: 0 80px 0 0;
   }
 
   .director__image img {
-    border-radius: 0 80px 0 0;
-    object-position: 0% 14%;
+    width: 100%;
+    height: 100%;
+    transform: scale(1.2);
+    margin-top: 20px;
+    margin-left: -23px;
+    object-fit: cover;
+    object-position: 100% 0%;
   }
 
   .director-item__lead {
@@ -345,7 +359,7 @@
   }
 
   /*==============================================================
-  　　PC_院長の紹介
+  　　PC_代表の紹介
   ==============================================================*/
   .director-inner {
     display: grid;
@@ -354,9 +368,17 @@
   }
 
   .director__image {
+    width: 100%;
     height: 320px;
     margin-bottom: 0;
     padding-right: 0;
+  }
+
+  .director__image img {
+    transform: scale(1);
+    margin-top: 0;
+    margin-left: 0;
+    object-position: 100% 0%;
   }
 
   .director-item__lead {
@@ -416,6 +438,9 @@
   .features-item {
     grid-template-columns: 1fr 1.1fr;
   }
+  .features-item.item-02 {
+    grid-template-columns: 1.1fr 1fr;
+  }
 
   /* 画像 */
   .features-item__image {
@@ -443,7 +468,7 @@
   }
 
   /*==============================================================
-  　　PC-big_院長の紹介
+  　　PC-big_代表の紹介
   ==============================================================*/
   .director .block-title {
     margin-bottom: 76px;

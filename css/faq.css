@@ -92,10 +92,12 @@
     overflow: hidden;
   }
 
+  /* FAQリンク */
   .faq-content .con-text a {
-    color: var(--color-text-accent);
-    font-weight: bold;
-    line-height: 2.3;
+    display: inline-block;
+    font-weight: 550;
+    margin-top: 12px;
+    border-bottom: solid 1px var(--color-text-base);
   }
 
   .faq-content .con-text .margin-bottom {
@@ -203,6 +205,12 @@
     letter-spacing: 0.1em;
   }
 
+  /* FAQリンク */
+  .faq-content .con-text a {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+
   /* トグルアイコン */
   .faq-icon {
     width: 40px;
@@ -249,12 +257,14 @@
   ==============================================================*/
   /*======== アニメーション ========*/
   .faq-title .text-Q__num,
-  .faq-title .title-text {
+  .faq-title .title-text,
+  .faq-content .con-text a {
     transition: all 0.3s ease;
   }
 
   .faq-title:hover .text-Q__num,
-  .faq-title:hover .title-text {
+  .faq-title:hover .title-text,
+  .faq-content .con-text a:hover {
     opacity: 0.65;
   }
 
