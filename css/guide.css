@@ -173,6 +173,11 @@
   /*==============================================================
   　　料金表
   ==============================================================*/
+  /* .price {
+    max-width: 100vw;
+    overflow: hidden;
+  } */
+
   .price-lead {
     font-size: 14px;
     letter-spacing: 0.15rem;
@@ -183,7 +188,8 @@
   .price-list {
     /* width: 90%; */
     border: solid 1px var(--color-text-base);
-    border-bottom: none;
+    /* border-bottom: none; */
+    margin-bottom: 20px;
   }
   .price-list.end {
     border-bottom: solid 1px var(--color-text-base);
@@ -192,31 +198,62 @@
   .price-list dt {
     font-size: 19px;
     letter-spacing: 0.2rem;
-    padding: 20px 20px;
+    padding: 20px;
     border-bottom: solid 1px var(--color-line-item);
   }
 
   .price-list__name {
+    width: fit-content;
     white-space: nowrap;
     margin-bottom: 12px;
   }
-  .price-list.end .price-list__name {
-    margin-left: -10px;
+
+  .price-list__price-box {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    width: fit-content;
+    line-height: 1.6;
+    margin-top: 20px;
+    font-size: 17px;
+    letter-spacing: 0.08rem;
+  }
+
+  .price-02 .price-partition {
+    opacity: 0;
   }
 
   .price-list__price {
-    text-align: right;
-    line-height: 1.1;
-  }
-  .price-list__price .price-off {
-    font-size: 13px;
-    letter-spacing: 0.16rem;
+    white-space: nowrap;
+    width: fit-content;
   }
 
+  .price-num {
+    font-size: 19px;
+    font-weight: 500;
+  }
+
+  .price-partition {
+    position: relative;
+    top: -2px;
+    margin-right: 18px;
+    margin-left: 12px;
+    text-align: center;
+    width: fit-content;
+  }
+
+  /* .price-list__price {
+    text-align: right;
+    line-height: 1.1;
+  } */
+  /* .price-list__price .price-off {
+    font-size: 13px;
+    letter-spacing: 0.16rem;
+  } */
+
   .price-list dd {
-    padding: 15px 20px 15px;
+    padding: 15px 20px;
     font-size: 14px;
-    line-height: 1.5;
+    line-height: 1.8;
   }
 
   /*==============================================================
@@ -444,20 +481,38 @@
     padding: 0 20px;
   }
 
+  .price-list {
+    margin-bottom: 40px;
+  }
+
   .price-list dt {
     display: grid;
-    grid-template-columns: auto auto;
+    /* grid-template-columns: auto auto; */
     font-size: 28px;
     letter-spacing: 0.34rem;
     padding: 40px 40px 30px;
   }
 
-  .price-list__price {
+  /* .price-list__price {
     line-height: 1;
     margin-top: 5.5px;
   }
   .price-list__price .price-off {
-    font-size: 14px;
+    font-size: 15px;
+    letter-spacing: 0.34rem;
+  } */
+
+  .price-list__price-box {
+    font-size: 24px;
+    grid-template-columns: repeat(3, auto);
+  }
+
+  .price-02 .price-partition {
+    opacity: 1;
+  }
+
+  .price-num {
+    font-size: 28px;
   }
 
   .price-list dd {
@@ -466,6 +521,7 @@
     letter-spacing: 0.1rem;
     line-height: 1.75;
   }
+
 
   /*==============================================================
   　　TB_営業案内
@@ -649,6 +705,11 @@
     padding: 0;
   }
 
+  .price-partition {
+    margin-right: 36px;
+    margin-left: 30px;
+  }
+
   /*==============================================================
   　　PC_営業案内
   ==============================================================*/
@@ -789,8 +850,14 @@
   /*==============================================================
   　　PC-big_料金表
   ==============================================================*/
+  .price-list__price-box {
+    font-size: 24px;
+    margin-top: 17px;
+    margin-bottom: 4px;
+  }
+
   .price-list__price .price-num {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   /*==============================================================

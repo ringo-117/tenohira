@@ -173,13 +173,69 @@
   }
 
   /*==============================================================
+    　　施術開始お知らせ
+  ==============================================================*/
+  .min-info {
+    border: solid 3.4px var(--color-bg-section);
+    background-color: var(--color-bg-white);
+    color: #000;
+    letter-spacing: 0.13em;
+    font-weight: 600;
+    margin: 30px 24px 8px;
+    line-height: 1.6;
+    font-family: var(--font-ja);
+    padding: 18px 20px 14px;
+  }
+
+  .min-info__title {
+    font-size: 16px;
+  }
+
+  .min-info__icon {
+    position: relative;
+    top: -7.2px;
+    width: auto;
+    height: 18px;
+
+    height: 17.5px;
+    top: -3.4px;
+  }
+
+  .min-info__text {
+    font-size: 13.5px;
+    /* padding: 7px 2px; */
+    padding: 7px 0;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+  }
+
+  .min-info__contact-btn {
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    margin: 8px 0;
+  }
+
+  .min-info__contact-btn p {
+    font-size: 13.5px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    /* border-radius: 25px; */
+    background: var(--color-bg-section);
+    color: var(--color-text-white);
+    border: 2px solid #3A5674;
+    width: 100%;
+    text-align: center;
+  }
+
+  /*==============================================================
     　　こんなお悩みありませんか？
   ==============================================================*/
   .concerns .section-title__ja {
     letter-spacing: 0.1em;
     font-size: 25px;
   }
-
 
   .concerns-list {
     display: grid;
@@ -226,6 +282,13 @@
   /*==============================================================
     　　選ばれてる理由
   ==============================================================*/
+  .strengths__top-lead{
+    font-size: 14px;
+    line-height: 1.6;
+    letter-spacing: 0.16em;
+    margin-bottom: 48px;
+  }
+
   .strengths-item {
     margin-bottom: 30px;
   }
@@ -383,8 +446,8 @@
     bottom: 30px;
     left: 24px;
     color: var(--color-text-white);
-    /* min-width: 90%; */
     z-index: 5;
+    min-height: 65px;
   }
 
   .review-title {
@@ -424,7 +487,18 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  .slide-01 .review-image img {
     object-position: 75% 100%;
+  }
+
+  .slide-02 .review-image img {
+    object-position: 65% 100%;
+  }
+
+  .slide-03 .review-image img {
+    object-position: 45% 100%;
   }
 
 
@@ -711,7 +785,6 @@
   }
 
 
-
   /*==============================================================
     　　TB_ヒーロー
   ==============================================================*/
@@ -735,6 +808,28 @@
     width: 10px;
     height: 10px;
     margin: 0 12px !important;
+  }
+
+  /*==============================================================
+    　　TB_施術開始お知らせ
+  ==============================================================*/
+  .hero {
+    position: relative;
+  }
+
+  .min-info {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    z-index: 10;
+    /* width: 380px; */
+    width: 363px;
+    border: solid 4.5px var(--color-bg-section);
+    padding: 20px 28px 16px;
+  }
+
+  .min-info__icon {
+    top: -3.3px;
   }
 
   /*==============================================================
@@ -764,6 +859,12 @@
   /*==============================================================
     　　TB_選ばれてる理由
   ==============================================================*/
+  .strengths__top-lead{
+    font-size: 16px;
+    line-height: 2.1;
+    margin: 0 20px 72px;
+  }
+
   .strengths-item {
     margin-bottom: 0;
   }
@@ -857,8 +958,10 @@
   }
 
   .review__text-box {
-    bottom: 40px;
+    /* bottom: 40px; */
+    bottom: 30px;
     left: 30px;
+    min-height: 80px;
   }
 
   .review-title {
@@ -990,6 +1093,46 @@
     　　PC_ヒーロー
   ==============================================================*/
 
+  /*==============================================================
+    　　PC_施術開始お知らせ
+  ==============================================================*/
+  .min-info {
+    /* width: 450px; */
+    width: 416px;
+    padding: 24px 34px;
+  }
+
+  .min-info__title {
+    font-size: 18px;
+  }
+
+  .min-info__icon {
+    height: 20px;
+    top: -3.4px;
+    margin-right: 2px;
+  }
+
+  .min-info__text {
+    font-size: 15px;
+    padding: 8px 3px 4px;
+  }
+
+  .min-info__contact-btn {
+    margin: 16px 0 0;
+  }
+
+  .min-info__contact-btn p {
+    font-size: 15px;
+    padding: 14px 40px;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .min-info__contact-btn p:hover {
+    background: var(--color-bg-white);
+    color: var(--color-text-base);
+  }
+
 
   /*==============================================================
     　　PC_こんなお悩みありませんか？
@@ -1020,6 +1163,13 @@
   /*==============================================================
     　　PC_選ばれてる理由
   ==============================================================*/
+  .strengths__top-lead{
+    margin: -8px auto 88px;
+    line-height: 2.125;
+    text-align: center;
+    font-weight: 500;
+  }
+
   .strengths-list {
     column-gap: 100px;
     row-gap: 80px;
@@ -1032,12 +1182,12 @@
 
   .strengths-lead__title {
     font-size: 28px;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   }
 
   .strengths-lead__text {
     font-size: 16px;
-    line-height: 1.6;
+    line-height: 1.75;
     font-weight: 550;
   }
 
@@ -1096,9 +1246,18 @@
     padding: 0 50px 120px;
   }
 
+  .review__text-box {
+    bottom: 40px;
+    min-height: 94px;
+  }
+
   .review-title {
     font-size: 28px;
     margin-bottom: 8px;
+  }
+
+  .slide-02 .review-image img {
+    object-position: 63% 100%;
   }
 
   /* 準備中 */
@@ -1154,6 +1313,33 @@
   }
 
   /*==============================================================
+    　　PC-big_施術開始お知らせ
+  ==============================================================*/
+  .min-info {
+    border: solid 6px var(--color-bg-section);
+    right: 24px;
+    bottom: 100px;
+    /* width: 500px; */
+    width: 447px;
+    padding: 26px 36px;
+  }
+
+  .min-info__title {
+    font-size: 20px;
+  }
+
+  .min-info__icon {
+    height: 23px;
+    top: -3.4px;
+    margin-right: 4px;
+  }
+
+  .min-info__text {
+    font-size: 16px;
+    padding: 8px 3px 4px;
+  }
+
+  /*==============================================================
     　　PC-big_てのひらについて
   ==============================================================*/
   /*======== アニメーション ========*/
@@ -1202,6 +1388,7 @@
   .review__text-box {
     bottom: 60px;
     left: 44px;
+    min-height: 108px;
   }
 
   .review-title {
@@ -1250,8 +1437,6 @@
     opacity: 0.65;
   }
 
-  .swiper-slide.slide-02 a:hover,
-  .swiper-slide.slide-03 a:hover,
   .swiper-slide.slide-04 a:hover {
     opacity: 1;
   }

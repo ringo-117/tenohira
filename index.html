@@ -2,6 +2,14 @@
 <html lang="ja">
   <head>
     <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ3RKEENJ6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-ZZ3RKEENJ6');
+    </script>
 
     <!-- 正規ページ設定 -->
     <link rel="canonical" href="https://tenohiraokagaki.com/">
@@ -53,8 +61,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <!-- css -->
     <link rel="stylesheet" href="css/destyle.css">
-    <link rel="stylesheet" href="css/common.css?v=2.3">
-    <link rel="stylesheet" href="css/index.css?v=3.1">
+    <link rel="stylesheet" href="css/common.css?v=3.0">
+    <link rel="stylesheet" href="css/index.css?v=3.7">
   </head>
 
 
@@ -67,7 +75,7 @@
       <div id="line-bottom"></div>
 
       <!-- モーダル -->
-      <div class="modal-box">
+      <!-- <div class="modal-box">
         <article class="modal-container">
           <div class="close"><span>&times;</span></div>
           <div class="modal-item">
@@ -90,7 +98,7 @@
 
         </article>
         <div class="modal-bg"></div>
-      </div>
+      </div> -->
 
       <!-- ヒーロー -->
       <section class="hero">
@@ -121,6 +129,18 @@
           <!-- ドット -->
           <div class="swiper-pagination"></div>
         </div>
+
+        <!-- お知らせ -->
+        <article class="min-info">
+          <h3 class="min-info__title">
+            <img class="min-info__icon" src="img/icon/icon-info.png" alt="お知らせアイコン">
+            <span>お知らせ</span>
+          </h3>
+          <p class="min-info__text"><span class="">【初回体験40分無料】 </span>お気軽にご連絡ください</p>
+          <a class="min-info__contact-btn" href="tel:070-1378-1382">
+            <p>お問い合わせ</p>
+          </a>
+        </article>
       </section>
 
       <!-- こんなお悩みありませんか？ -->
@@ -165,6 +185,13 @@
           <p class="section-title__en">Strengths</p>
         </div>
 
+        <p class="strengths__top-lead">
+          当サービスでは、 安さではなく 「再発しにくい身体づくり」 を大切にしています。<br class="sp-none">
+          不調の原因を丁寧に評価し、 身体の使い方やセルフケアまで一人ひとりに合わせてご提案します。<br class="sp-none">
+          そのため、 十分な時間を確保した施術を行っています。<br class="tb-none">
+          その場しのぎではなく、 身体の変化を実感したい方に選ばれています。
+        </p>
+
         <ul class="strengths-list">
           <li class="strengths-item">
             <div class="strengths-item__image">
@@ -172,7 +199,7 @@
             </div>
             <div class="strengths-lead">
               <h3 class="strengths-lead__title">訪問リハビリ</h3>
-              <p class="strengths-lead__text">外出が難しい方でも、<br>ご自宅で質の高いリハビリを受けられます。</p>
+              <p class="strengths-lead__text">外出が難しい方でも、ご自宅で質の高いリハビリを受けられます。</p>
             </div>
           </li>
           <li class="strengths-item">
@@ -181,7 +208,7 @@
             </div>
             <div class="strengths-lead">
               <h3 class="strengths-lead__title">担当制</h3>
-              <p class="strengths-lead__text">毎回同じ理学療法士が伺うため、<br>安心して体の変化を相談できます。</p>
+              <p class="strengths-lead__text">毎回同じ理学療法士が伺うため、安心して体の変化を相談できます。</p>
             </div>
           </li>
           <li class="strengths-item">
@@ -190,7 +217,7 @@
             </div>
             <div class="strengths-lead">
               <h3 class="strengths-lead__title">専門性の高さ</h3>
-              <p class="strengths-lead__text">脳卒中認定理学療法士が対応するため、<br>脳卒中の方も安心してリハビリを受けれます。</p>
+              <p class="strengths-lead__text">脳卒中認定理学療法士が対応するため、<br class="pc-none">脳卒中の方も安心してリハビリを受けれます。</p>
             </div>
           </li>
           <li class="strengths-item end">
@@ -199,7 +226,7 @@
             </div>
             <div class="strengths-lead">
               <h3 class="strengths-lead__title">期間に縛られない</h3>
-              <p class="strengths-lead__text">保険や制度の期間に左右されず、<br>ご本人のペースでリハビリを続けられます。</p>
+              <p class="strengths-lead__text">保険や制度の期間に左右されず、<br class="pc-none">ご本人のペースでリハビリを続けられます。</p>
             </div>
           </li>
         </ul>
@@ -309,27 +336,29 @@
                 </figure>
                 <div class="review__text-box">
                   <p class="review-title">下半身麻痺のリハビリ</p>
-                  <p class="review-personal">宗像市東郷 -A様</p>
+                  <p class="review-personal">宗像市東郷 -70代女性</p>
                 </div>
               </a>
             </div>
             <div class="swiper-slide slide-02">
-              <a>
-                <figure class="review-image soon">
-                  <img src="img/thumb/thumb-review-01.webp" alt="お客様の声-02">
+              <a href="review-02.html">
+                <figure class="review-image">
+                  <img src="img/thumb/thumb-review-02.webp" alt="お客様の声-02">
                 </figure>
                 <div class="review__text-box">
-                  <!-- <p class="review-title">準備中</p> -->
+                  <p class="review-title">お尻の痛み・両足の痺れ</p>
+                  <p class="review-personal">八幡西区友田 -80代女性</p>
                 </div>
               </a>
             </div>
             <div class="swiper-slide slide-03">
-              <a>
-                <figure class="review-image soon">
-                  <img src="img/thumb/thumb-review-01.webp" alt="お客様の声-03">
+              <a href="review-03.html">
+                <figure class="review-image">
+                  <img src="img/thumb/thumb-review-03.webp" alt="お客様の声-03">
                 </figure>
                 <div class="review__text-box">
-                  <!-- <p class="review-title">準備中</p> -->
+                  <p class="review-title">腰椎椎間板ヘルニア・<br>足のしびれ・腰痛</p>
+                  <p class="review-personal">若松区高須 -10代女性</p>
                 </div>
               </a>
             </div>
@@ -380,7 +409,7 @@
               <div class="faq-A">
                 <span class="text-A__num">A</span>
                 <div class="con-text">
-                  <p>現在は現金のみのお取り扱いとなっております。<br>
+                  <p>現在は現金のみのお取り扱いとなっております。<br class="sp-none">
                   クレジットカードや電子決済には対応しておりません。</p>
                 </div>
               </div>
@@ -400,7 +429,7 @@
               <div class="faq-A">
                 <span class="text-A__num">A</span>
                 <div class="con-text">
-                  <p>てのひらは自費サービスのため、公的保険はご利用いただけません。<br>その分、期間や回数に制限なく、お一人おひとりの状態に合わせて柔軟にご利用いただけます。</p>
+                  <p>てのひらは自費サービスのため、公的保険はご利用いただけません。 <br class="sp-none">その分、期間や回数に制限なく、お一人おひとりの状態に合わせて柔軟にご利用いただけます。</p>
                 </div>
               </div>
             </div>
@@ -419,7 +448,7 @@
               <div class="faq-A">
                 <span class="text-A__num">A</span>
                 <div class="con-text">
-                  <p>肩こり・腰痛・産後の不調・膝の痛み・歩行や姿勢の悩みなど幅広く対応しています。<br>理学療法士として、医学的な視点で原因を特定しながら施術します。</p>
+                  <p>肩こり・腰痛・産後の不調・膝の痛み・歩行や姿勢の悩みなど幅広く対応しています。 <br class="tb-none">理学療法士として、医学的な視点で原因を特定しながら施術します。</p>
                 </div>
               </div>
             </div>
@@ -485,7 +514,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/slider.js?v=1.1"></script>
     <script src="js/include.js?v=1.4"></script>
-    <script src="js/modal.js?v=1.3"></script>
-    <script src="js/common.js?v=1.2"></script>
+    <script src="js/modal.js?v=1.5"></script>
+    <script src="js/common.js?v=1.4"></script>
   </body>
 </html>
